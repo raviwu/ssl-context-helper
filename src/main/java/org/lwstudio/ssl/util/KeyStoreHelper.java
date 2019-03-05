@@ -13,7 +13,7 @@ public class KeyStoreHelper {
   private static final String KEY_STORE_PROVIDER = "SUN";
   private static final String KEY_STORE_FILE_PREFIX = "tmp-cacerts";
   private static final String KEY_STORE_FILE_SUFFIX = ".jks";
-  private static final String KEY_STORE_PASSWORD = "changeit";
+  public static final String KEY_STORE_PASSWORD = "changeit";
 
   private KeyStoreHelper() {}
 
