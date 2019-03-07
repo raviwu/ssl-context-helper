@@ -11,7 +11,7 @@ import java.security.cert.X509Certificate;
 import java.util.Base64;
 import java.util.Base64.Encoder;
 
-class KeyStoreUtils {
+public class KeyStoreUtils {
   private static final String KEY_STORE_TYPE = "JKS";
   private static final String KEY_STORE_PROVIDER = "SUN";
   private static final String KEY_STORE_FILE_PREFIX = "tmp-cacerts";
