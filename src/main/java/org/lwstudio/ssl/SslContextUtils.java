@@ -15,6 +15,12 @@ public class SslContextUtils {
     configureSslContext(getDefaultTrustManager());
   }
 
+  public static void assignCustomKey(String keyPath) throws Exception {
+    X509TrustManager customTm = generateCustomTrustManager(keyPath);
+
+    configureSslContext(customTm);
+  }
+
   public static void appendCustomKey(String keyPath) throws Exception {
     X509TrustManager[] customManagers =
         new X509TrustManager[] {generateCustomTrustManager(keyPath)};

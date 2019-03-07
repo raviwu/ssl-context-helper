@@ -20,6 +20,9 @@ SslContextUtils.appendCustomKey(generatedTempKeyStorePath);
 
 // In case you need to reset your SslContext back to default:
 SslContextUtils.reset();
+
+// In case you need to replace default manager with your key:
+SslContextUtils.assignCustomKey(generatedTempKeyStorePath);
 ```
 
 ## Develop
