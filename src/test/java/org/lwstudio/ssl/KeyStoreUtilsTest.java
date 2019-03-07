@@ -1,15 +1,16 @@
-package org.lwstudio.ssl.util;
+package org.lwstudio.ssl;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class KeyStoreHelperTest {
+public class KeyStoreUtilsTest {
+
   @Test
   public void geerateTempKeyStoreFromPem() throws Exception {
-    String key = "/test-fake-pem";
+    String key = "/aws-root-ca-1.pem";
 
     String generatedKeyFilePath =
-        KeyStoreHelper.createTempKeyStoreFile(ResourcePathHelper.getPath(key));
+        KeyStoreUtils.createTempKeyStoreFile(ResourcePathUtils.getPath(key));
 
     Assert.assertTrue(generatedKeyFilePath.contains(".jks"));
   }

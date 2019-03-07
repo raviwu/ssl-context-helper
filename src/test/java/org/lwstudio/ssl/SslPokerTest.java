@@ -1,4 +1,4 @@
-package org.lwstudio.ssl.util;
+package org.lwstudio.ssl;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class SslPokerTest {
 
   @Test
   public void connectToInvalidHost() throws Exception {
-    String url = "localhost";
+    String url = "good.sca1a.amazontrust.com";
 
     Assert.assertFalse(POKER.test(url));
   }

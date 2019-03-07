@@ -1,4 +1,4 @@
-package org.lwstudio.ssl.util;
+package org.lwstudio.ssl;
 
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
@@ -20,6 +20,8 @@ public class SslPoker {
   }
 
   public boolean test(String url) {
+    System.out.println("[SslPoker] Poking: https://" + url);
+
     try {
       SSLSocketFactory localSSLSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
 
@@ -34,8 +36,11 @@ public class SslPoker {
         System.out.print(localInputStream.read());
       }
 
+      System.out.println("[SslPoker] Success conection");
+
       return true;
     } catch (Exception exception) {
+      System.out.println("[SslPoker] Error:" + exception.getMessage());
       exception.printStackTrace();
 
       return false;
